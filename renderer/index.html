@@ -1,0 +1,65 @@
+<html>
+  <head>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.6.0/lib/p5.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/addons/p5.dom.min.js"></script> -->
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self'" />
+   <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+  </head>
+  <body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <div><h3>Flappy Bird - Neuroevolution</h3></div>
+      </ul>
+    </div>
+    <div class="d-flex align-items-center">
+      <button class="btn btn-primary pt-1" id="playgame">PLAY GAME</button>
+      </div>
+  </div>
+</nav>
+<div class="d-flex flex-row">
+      <div class="mygame flex-col" id="sketch-holder">
+      </div>
+      <div class="d-flex flex-column">
+        <div class="px-3 pt-4 d-flex flex-row">
+          <div><h2> SCORE: </h2></div>
+          <h2 id="score"> 0</h2>
+        </div>
+        <div class="px-3 pt-4 d-flex flex-row">
+          <div><h2> HIGH SCORE: </h2></div>
+          <h2 id="topscore"> 0</h2>
+        </div>
+        </div>
+    </div>
+        <div class="d-flex flex-row py-1 text-align.center justify-content-between">
+          <div class="mx-4"><div class=" mt-3">speed</div></div>
+          <div class="mx-4" ><div class="mt-3">generations: <span id="generation">0</span></div></div>
+          <div class="mx-4"><div class="mt-2"><button type="button" class="btn btn-info" id="runTrainedModel">Run Trained Model</button>
+          </div></div>
+          <div class="mx-4"><div class="mt-2"><button type="button" class="btn btn-info" id="bestModel">Run The best Model </button>
+          </div></div>
+          <div class="mx-4"><div class="mt-2"><button type="button" class="btn btn-danger"  id="pauseTraining" >start/stop Training</button>
+          </div></div>
+          <div class="mx-4"><div class="mt-2"><button type="button" class="btn btn-primary" id="download" >Download Model</button>
+          </div></div>
+          <div class="file-upload mt-0 mx-4 d-flex flex-row ">
+            <button class="btn btn-primary mx-5 d-inline mb-2">Run Model</button>
+            <div class="mx-"><div class=""><button type="button" class="btn btn-primary" id="upload" >upload model</button></div></div>
+            <div class="file-select">
+              <!-- <div class="file-select-button" id="fileName">Upload Model</div> -->
+              <div class="file-select-name" id="noFile">chooseFile</div> 
+              <input type="file" name="chooseFile" id="chooseFile">
+            </div> 
+          </div>
+        </div>
+    <script src="render.js"></script>
+    <script src="bird.js"></script>
+    <script src="sketch.js"></script>
+    <script src="pipe.js"></script>
+    <script src="nn.js"></script>
+    <script src="matrix.js"></script>
+    <script src="ga.js"></script>
+    </body>
+</html>

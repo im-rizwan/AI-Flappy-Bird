@@ -1,0 +1,21 @@
+{
+  "name": "myelecttronapp",
+  "producName": "Flappy Bird - Neuroevolution",
+  "version": "1.0.0",
+  "description": "Neuroevolution-FlappyBird",
+  "main": "main.js",
+  
+  "scripts": {
+    "start": "electron .",
+    "package": "electron-packager . AI FLAPSTER --platform=win32 --arch=x64 --out=C:/Users/Public --overwrite"
+  },
+  
+  "author": "Rizwan",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^24.3.0",
+    "toastify-js": "^1.12.0"
+
+  }
+  
+}
